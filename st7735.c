@@ -1,7 +1,7 @@
 #include "st7735.h"
 #include "spi.h"
 #include "font.h"
-
+#include "picture.h"
 #define DC GPIO_PIN_1
 #define BL GPIO_PIN_0
 #define CS GPIO_PIN_4
@@ -142,6 +142,13 @@ void Lcd_DrawWrods(uint16_t x,uint16_t y,uint8_t word_times,uint8_t word_start,u
 		if(word_times>0){
 		Lcd_DrawWrods(x+16,y,word_times,word_start+2,Font_color,Brackground_color);
 		}
+}
+//图片显示函数  16位色彩度
+void Lcd_disPlayPicture(uint16_t x,uint16_t y){
+Lcd_Set_Address(x,y,x+40-1,y+45-1);//设置写入区域
+	for(int i=0;i<sizeof(gImage_33);i++){
+	Lcd_Write_Data(gImage_33[i]);
+	}
 }
 
 void Lcd_DrawNums(uint16_t x,uint16_t y,uint16_t nums,uint16_t Font_color,uint16_t Brackground_color){

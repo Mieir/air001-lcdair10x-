@@ -27,3 +27,4 @@
 .\objects\st7735.o: spi.h
 .\objects\st7735.o: main.h
 .\objects\st7735.o: font.h
+.\objects\st7735.o: picture.h

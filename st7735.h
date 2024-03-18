@@ -16,5 +16,6 @@ void Lcd_DrawWord(uint16_t x,uint16_t y,uint16_t Font_color,uint16_t Brackground
 void Lcd_DrawNums(uint16_t x,uint16_t y,uint16_t nums,uint16_t Font_color,uint16_t Brackground_color);
 void Lcd_DrawWrods(uint16_t x,uint16_t y,uint8_t word_times,uint8_t word_start,uint16_t Font_color,uint16_t Brackground_color);
 void Lcd_time(uint8_t h,uint8_t m,uint8_t s,uint16_t x,uint16_t y);
+void Lcd_disPlayPicture(uint16_t x,uint16_t y);
 #endif
 

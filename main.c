@@ -52,8 +52,8 @@ int main(void)
 	GPIO_Init();
 
 uint8_t state=1;
-	
- Lcd_time(4,23,30,40,24);
+	 Lcd_disPlayPicture(0,17);
+		Lcd_time(4,23,30,40,24);
 	while (1)
 	{ 
 	
