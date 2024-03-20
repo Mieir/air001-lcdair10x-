@@ -10,7 +10,7 @@
 PF00 PF01 PB03 (其中PA14引脚可复用为GPIO,但是烧录时通过swd烧录就没有复用该引脚，复用该引脚后可通过ttl串口烧录恢复)
 保留的引脚有3个分别用于 选着时间 调整时间 确定 3项功能。
 该项目不定期更新！
-更新1 增加PWM背光调节
+更新1 增加PWM背光调节！
 ![image](https://github.com/Mieir/air001-lcdair10x-/blob/main/picture/9bbabb760bb99b871abf8afe679e4d8.jpg)
 ![image](https://github.com/Mieir/air001-lcdair10x-/blob/main/picture/640.png)
 ![image](https://github.com/Mieir/air001-lcdair10x-/blob/main/picture/afec5f0d79ee888f91b70405666e188.jpg)
