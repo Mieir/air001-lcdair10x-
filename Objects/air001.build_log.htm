@@ -27,7 +27,17 @@ Project File Date:  03/19/2024
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'H:\keil 5\Core\ARM\ARMCC\Bin'
 Build target 'Target 1'
-".\Objects\air001.axf" - 0 Error(s), 0 Warning(s).
+compiling st7735.c...
+H:\keil 5\Pack\Keil\AIR001_DFP\1.1.0\Device\Include\air001_dev.h(4932): warning:  #1-D: last line of file ends without a newline
+  */
+font.h(77): warning:  #1-D: last line of file ends without a newline
+  #endif
+picture.h(240): warning:  #1-D: last line of file ends without a newline
+  #endif
+st7735.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=11264 RO-data=3972 RW-data=1744 ZI-data=1808  
+".\Objects\air001.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -53,10 +63,10 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:Startup:0.0.1
-      Source file:   Device\Source\ARM\startup_air001_dev.s
       Include file:  Device\Include\air001xx.h
+      Source file:   Device\Source\ARM\startup_air001_dev.s
       Source file:   Device\Source\system_air001xx.c
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

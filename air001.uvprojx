@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>AIR001_DEV</Define>
               <Undefine></Undefine>
-              <IncludePath>.\AIR001xx_HAL_Driver\Inc\Legacy;.\AIR001xx_HAL_Driver\Inc;.\other_Driver;.\AIR001xx_HAL_Driver\Inc;.\AIR001xx_HAL_Driver\Src;G:\air001</IncludePath>
+              <IncludePath>.\AIR001xx_HAL_Driver\Inc\Legacy;.\AIR001xx_HAL_Driver\Inc;.\other_Driver;.\AIR001xx_HAL_Driver\Inc;.\AIR001xx_HAL_Driver\Src;G:\air001;G:\air001;G:\air001</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -437,6 +437,16 @@
               <FileType>5</FileType>
               <FilePath>.\picture.h</FilePath>
             </File>
+            <File>
+              <FileName>tim.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\tim.h</FilePath>
+            </File>
+            <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\tim.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -463,21 +473,6 @@
               <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>air001xx_hal_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_pwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>air001xx_hal_pwr_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_pwr_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>air001xx_hal_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_flash.c</FilePath>
-            </File>
-            <File>
               <FileName>air001xx_hal_spi.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_spi.c</FilePath>
@@ -488,9 +483,9 @@
               <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_spi_ex.c</FilePath>
             </File>
             <File>
-              <FileName>air001xx_ll_spi.c</FileName>
+              <FileName>air001xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_ll_spi.c</FilePath>
+              <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_cortex.c</FilePath>
             </File>
             <File>
               <FileName>air001xx_hal_spi.h</FileName>
@@ -506,11 +501,6 @@
               <FileName>air001xx_hal_dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>air001xx_hal_cortex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_cortex.c</FilePath>
             </File>
             <File>
               <FileName>air001xx_hal_adc.c</FileName>
@@ -536,6 +526,31 @@
               <FileName>air001xx_hal_tim_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_tim_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>air001xx_hal_crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_crc.c</FilePath>
+            </File>
+            <File>
+              <FileName>air001xx_hal_crc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_crc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>air001xx_hal_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>air001xx_hal_rtc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_rtc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>air001xx_hal_pwr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\AIR001xx_HAL_Driver\Src\air001xx_hal_pwr.c</FilePath>
             </File>
           </Files>
         </Group>

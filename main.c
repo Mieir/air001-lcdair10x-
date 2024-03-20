@@ -2,6 +2,7 @@
 #include "spi.h"
 #include "st7735.h"
 #include "gpio.h"
+#include "tim.h"
  SPI_HandleTypeDef Spi1Handle;
 static void APP_SystemClockConfig(void)
 {
@@ -34,7 +35,7 @@ static void APP_SystemClockConfig(void)
 
 uint8_t sum=0x43;
 void HAL_MspInit(void)
-{
+{ 
   __HAL_RCC_SYSCFG_CLK_ENABLE();
   __HAL_RCC_PWR_CLK_ENABLE();
 }
@@ -42,88 +43,29 @@ void HAL_MspInit(void)
 
 int main(void)
 {	
-	
+	//HAL库初始化
 	HAL_Init();
+	//时钟配置
 	APP_SystemClockConfig();
+	//延时等待屏幕上电
 	HAL_Delay(200);
-  MX_SPI1_Init();
-
-	ST7735_Init();
+	//IO引脚初始化
 	GPIO_Init();
+	//SPI 通信初始化
+  MX_SPI1_Init();
+	//屏幕驱动初始化
+	ST7735_Init();
+	//定时器初始化
+  MX_TIM3_Init();
+	//PWM开启
+	HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_3);
+	//图片显示函数
+	Lcd_disPlayPicture(0,17);
+	//时钟显示函数
+	Lcd_time(4,23,30,40,24);
 
-uint8_t state=1;
-	 Lcd_disPlayPicture(0,17);
-		Lcd_time(4,23,30,40,24);
 	while (1)
 	{ 
-	
-
-
-		
-/*
-		if((HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_3)==RESET)||(HAL_GPIO_ReadPin(GPIOF,GPIO_PIN_1)==RESET)){
-			HAL_Delay(10);
-		if((HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_3)==RESET)||(HAL_GPIO_ReadPin(GPIOF,GPIO_PIN_1)==RESET)){
-			state=1+state;
-		}
-		}
-		if(state>3){
-		state=1;
-		}
-		if(state<0){
-		state=3;
-		}
-		if(state==1){
-		Lcd_DrawWrods(16,36,2,12,0x0001,0xffff);	
-		Lcd_DrawWrods(16,0,2,4,0xffff,0x0001);
-		Lcd_DrawWrods(16,18,2,8,0x0001,0xffff);
-		}
-		if(state==2){
-		Lcd_DrawWrods(16,0,2,4,0x0001,0xffff);
-		Lcd_DrawWrods(16,18,2,8,0xffff,0x0001);
-		Lcd_DrawWrods(16,36,2,12,0x0001,0xffff);		
-		}
-		if(state==3){
-		Lcd_DrawWrods(16,0,2,4,0x0001,0xffff);
-		Lcd_DrawWrods(16,18,2,8,0x0001,0xffff);
-		Lcd_DrawWrods(16,36,2,12,0xffff,0x0001);		
-		}*/
-		/*switch (state){
-				
-					case 1:{
-						Lcd_DrawWord(0,16,0x0001,0xffff,font3,32);
-						Lcd_DrawWord(16,16,0x0001,0xffff,font4,32);
-						Lcd_DrawWord(0,32,0x0001,0xffff,font5,32);
-						Lcd_DrawWord(16,32,0x0001,0xffff,font6,32);
-						Lcd_DrawWord(0,0,0xffff,0x0001,font1,32);
-						Lcd_DrawWord(16,0,0xffff,0x0001,font2,32);
-						
-					
-						break;
-				}
-					case 2:{	
-						Lcd_DrawWord(0,0,0x0001,0xffff,font1,32);
-						Lcd_DrawWord(16,0,0x0001,0xffff,font2,32);	
-						Lcd_DrawWord(0,16,0xffff,0x0001,font3,32);
-						Lcd_DrawWord(16,16,0xffff,0x0001,font4,32);
-						Lcd_DrawWord(0,32,0x0001,0xffff,font5,32);
-						Lcd_DrawWord(16,32,0x0001,0xffff,font6,32);
-						break;
-				}
-					case 3:{
-						Lcd_DrawWord(0,0,0x0001,0xffff,font1,32);
-						Lcd_DrawWord(16,0,0x0001,0xffff,font2,32);
-						Lcd_DrawWord(0,16,0x0001,0xffff,font3,32);
-						Lcd_DrawWord(16,16,0x0001,0xffff,font4,32);
-						Lcd_DrawWord(0,32,0xffff,0x0001,font5,32);
-						Lcd_DrawWord(16,32,0xffff,0x0001,font6,32);
-						
-						break;
-				}
-					
-				}*/
-
-
-
+//主循环函数
 	}
 }

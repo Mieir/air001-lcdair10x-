@@ -23,3 +23,5 @@
 .\objects\air001xx_hal_tim.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_spi.h
 .\objects\air001xx_hal_tim.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_adc.h
 .\objects\air001xx_hal_tim.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_adc_ex.h
+.\objects\air001xx_hal_tim.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_tim.h
+.\objects\air001xx_hal_tim.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_tim_ex.h

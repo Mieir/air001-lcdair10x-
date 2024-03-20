@@ -24,6 +24,9 @@
 .\objects\main.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_spi.h
 .\objects\main.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_adc.h
 .\objects\main.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_adc_ex.h
+.\objects\main.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_tim.h
+.\objects\main.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_tim_ex.h
 .\objects\main.o: spi.h
 .\objects\main.o: st7735.h
 .\objects\main.o: gpio.h
+.\objects\main.o: tim.h

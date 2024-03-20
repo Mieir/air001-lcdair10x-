@@ -5,7 +5,12 @@ extern SPI_HandleTypeDef Spi1Handle;
 void NMI_Handler(void)
 {
 }
+void Error_Handler(void){
 
+
+
+
+}
 void HardFault_Handler(void)
 {
   while (1)

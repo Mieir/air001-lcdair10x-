@@ -177,7 +177,10 @@ HAL_StatusTypeDef HAL_DeInit(void)
   /* Reset of all peripherals */
   __HAL_RCC_APB1_FORCE_RESET();
   __HAL_RCC_APB1_RELEASE_RESET();
-
+	
+//	__HAL_RCC_TIM3_FORCE_RESET();
+//	__HAL_RCC_TIM3_RELEASE_RESET();
+	
   __HAL_RCC_APB2_FORCE_RESET();
   __HAL_RCC_APB2_RELEASE_RESET();
 

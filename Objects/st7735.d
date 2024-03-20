@@ -24,7 +24,11 @@
 .\objects\st7735.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_spi.h
 .\objects\st7735.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_adc.h
 .\objects\st7735.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_adc_ex.h
+.\objects\st7735.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_tim.h
+.\objects\st7735.o: .\AIR001xx_HAL_Driver\Inc\air001xx_hal_tim_ex.h
 .\objects\st7735.o: spi.h
 .\objects\st7735.o: main.h
 .\objects\st7735.o: font.h
 .\objects\st7735.o: picture.h
+.\objects\st7735.o: tim.h
+.\objects\st7735.o: H:\keil 5\Core\ARM\ARMCC\Bin\..\include\stdbool.h

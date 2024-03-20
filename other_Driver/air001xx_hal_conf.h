@@ -11,6 +11,7 @@ extern "C" {
 #define HAL_FLASH_MODULE_ENABLED
 #define HAL_PWR_MODULE_ENABLED
 #define HAL_CORTEX_MODULE_ENABLED
+	#define HAL_TIM_MODULE_ENABLED
 #define HAL_SPI_MODULE_ENABLED
 #define HAL_DMA_MODULE_ENABLED
 #define HAL_ADC_MODULE_ENABLED
@@ -32,6 +33,7 @@ extern "C" {
 #include "air001xx_hal_dma.h"
 #include "air001xx_hal_spi.h"
 #include "air001xx_hal_adc.h"
+#include "air001xx_hal_tim.h"
 #define assert_param(expr) ((void)0U)
 
 #ifdef __cplusplus
